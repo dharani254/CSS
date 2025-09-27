@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Selector Forms Example</title>
+
+<style>
+/* i. Simple Selectors */
+h1 { color: darkblue; } /* element selector */
+#unique { color: green; } /* id selector */
+.highlight { background-color: yellow; } /* class selector */
+p, li { font-size: 16px; } /* group selector */
+* { font-family: Arial, sans-serif; } /* universal selector */
+
+/* ii. Combinator Selectors */
+div p { color: purple; } /* descendant selector */
+div > p { font-weight: bold; } /* child selector */
+h2 + p { color: brown; } /* adjacent sibling */
+h2 ~ p { background-color: #f0f0f0; } /* general sibling */
+
+/* iii. Pseudo-class Selectors */
+a:hover { color: red; } /* hover effect */
+li:first-child { color: blue; } /* first child */
+li:last-child { color: orange; } /* last child */
+input:focus { border: 2px solid blue; } /* focus on input */
+
+/* iv. Pseudo-element Selectors */
+p::first-letter { font-size: 24px; color: crimson; } /* first letter */
+p::after { content: " [Read more...]"; color: gray; } /* after content */
+
+/* v. Attribute Selectors */
+input[type="text"] { background-color: #e6f7ff; }
+a[target="_blank"] { text-decoration: underline; }
+
+</style>
+</head>
+<body>
+<h1>CSS Selector Demonstration</h1>
+
+<p id="unique">This paragraph has an ID selector applied.</p>
+<p class="highlight">This paragraph uses a class selector.</p>
+
+<h2>Combinator Selector Examples</h2>
+<div>
+<p>Child paragraph inside div.</p>
+<section>
+<p>Descendant paragraph inside section within div.</p>
+</section>
+</div>
+<p>This paragraph is after h2 (adjacent sibling).</p>
+<p>Another paragraph after h2 (general sibling).</p>
+
+<h2>Pseudo-class Example</h2>
+<ul>
+<li>First list item</li>
+<li>Middle list item</li>
+<li>Last list item</li>
+</ul>
+<a href="https://example.com" target="_blank">External Link</a>
+<br><br>
+<input type="text" placeholder="Type here...">
+
+<input type="password" placeholder="Password">
+
+<h2>Pseudo-element Example</h2>
+<p>This paragraph demonstrates first-letter and after pseudo-elements.</p>
+</body>
+</html>
